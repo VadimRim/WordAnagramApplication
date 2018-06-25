@@ -32,8 +32,11 @@ public class DefaultController {
     }
 
     @GetMapping("/login")
-    public String login() {
-        return "/login";
+    public String login() { return "/login";
+    }
+
+    @GetMapping("/processword")
+    public String processword() { return "/processword";
     }
 
     @GetMapping("/403")

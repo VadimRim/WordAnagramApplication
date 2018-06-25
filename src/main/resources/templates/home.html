@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Spring Boot Thymeleaf + Spring Security</title>
+    <title>Anagram Word Welcome Page</title>
 
     <div th:replace="fragments/header :: header-css"/>
 
@@ -13,14 +13,17 @@
 <div class="container">
 
     <div class="starter-template">
-        <h1>Spring Boot Web Thymeleaf + Spring Security</h1>
-        <h2>1. Visit <a th:href="@{/admin}">Admin page (Spring Security protected, Need Admin Role)</a></h2>
-        <h2>2. Visit <a th:href="@{/user}">User page (Spring Security protected, Need User Role)</a></h2>
-        <h2>3. Visit <a th:href="@{/about}">Normal page</a></h2>
+        Anagram Word tool
+        <br/><a th:href="@{/admin}">Login</a> as Admin to configure system
+        <br/><a th:href="@{/user}">Login</a> as a USER to reuse custom settings and own history records
+        <form th:action="@{/processword}" method="get">
+            <br/><br/>Please enter your word
+            <br/><input type="text" id="word_as_text"/>
+            <input type="submit"/>
+        </form>
     </div>
 
 </div>
-<!-- /.container -->
 
 <div th:replace="fragments/footer :: footer"/>
 
